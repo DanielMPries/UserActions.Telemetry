@@ -1,0 +1,14 @@
+version: '3'
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - '6379:6379'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - redis-cluster
+
+networks:
+  redis-cluster:
+    driver: bridge
