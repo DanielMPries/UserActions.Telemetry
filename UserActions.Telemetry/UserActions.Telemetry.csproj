@@ -3,11 +3,17 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-
+    <ProjectId>UserActions.Telemetry</ProjectId>
+    <Version>1.0.0</Version>
+    <Authors>Daniel Pries</Authors>
+    <Description>Telemetry for UserActions</Description>
+    <PackageTags>UserActions.Telemetry;Endpoints;UserActions</PackageTags>
+    <RepositoryUrl>https://github.com/daniel-pries/UserActions.Telemetry</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <FrameworkReference Include="Microsoft.aSpNetCore.App"/>
+    <FrameworkReference Include="Microsoft.AspNetCore.App"/>
   </ItemGroup>
 
 </Project>

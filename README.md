@@ -6,9 +6,13 @@ The use case that origionated this is where distributed tracing application logs
 
 In OTEL situations, the data valume is higher and retention periods is shorter than what is needed.  This aggregation of user events is also captured for appending activites that are not related to application health and distributed transctions but rather common events like, `Sign In`, `Sign Out`, `One Time Passcode`, etc.
 
+When an action is sent, it includes a `status` property of `started`.  On return a new message is fired with a `status` property of `completed`.  If an exception occurs, an action is sent with the status of `faulted` and the exception is rethrown.  The middleware is not responsible for handling faulted events, but rather ensuring that its captured.
+
 ## UserActions.Telemetry.Redis
 
 This implementation uses a Redis stream as an event sink.  If a client id is supplied, this can build a user specific stream of events.
+
+This example includes a `docker-compose.yaml` setup for a local redis cluster to play with.  In a production situation, you'd connect your multiplexer to your production ready instances.  In your terminal `docker-compose up -d` will spin up redis and make it available via the `localhost` on port `6379`.
 
 ### To Use 
 

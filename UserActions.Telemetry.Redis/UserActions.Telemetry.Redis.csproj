@@ -1,5 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ProjectId>UserActions.Telemetry.Redis</ProjectId>
+    <Version>1.0.0</Version>
+    <Authors>Daniel Pries</Authors>
+    <Description>Telemetry for UserActions with Redis</Description>
+    <PackageTags>UserActions.Telemetry.Redis;Redis;Endpoints;UserActions</PackageTags>
+    <RepositoryUrl>https://github.com/daniel-pries/UserActions.Telemetry</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\UserActions.Telemetry\UserActions.Telemetry.csproj" />
   </ItemGroup>
@@ -7,11 +20,4 @@
   <ItemGroup>
     <PackageReference Include="StackExchange.Redis" Version="2.7.17" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
 </Project>
