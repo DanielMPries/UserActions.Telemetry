@@ -70,6 +70,7 @@ app.MapGet(
 ## TODO
 
 ```
+[ ] - Complete setup for nuget packages
 [ ] - Unit tests for data capture from context
 [ ] - Concrete implementations for other sinks like RabbitMQ, Azure Event Hubs and Kafka
 [ ] - Additional optional handling on `faulted` states
